@@ -15,7 +15,6 @@ const Index = () => {
   const { toast } = useToast();
 
   const handleSearch = async (city: string) => {
-    console.log("API KEY:", WEATHER_API_KEY);
     try {
       const [weatherResponse, forecastResponse] = await Promise.all([
         axios.get(`${WEATHER_API_BASE_URL}/weather`, {
